@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://suenchi.github.io/</id>
+    <title>SuenChi</title>
+    <updated>2021-11-30T07:58:47.971Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://suenchi.github.io/"/>
+    <link rel="self" href="https://suenchi.github.io/atom.xml"/>
+    <subtitle>冰冻三尺非一日之寒，积土成山非须斯之作</subtitle>
+    <logo>https://suenchi.github.io/images/avatar.png</logo>
+    <icon>https://suenchi.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, SuenChi</rights>
+    <entry>
+        <title type="html"><![CDATA[为什么选择计算机这个专业]]></title>
+        <id>https://suenchi.github.io/post/wei-shi-me-xuan-ze-ji-suan-ji-zhe-ge-zhuan-ye/</id>
+        <link href="https://suenchi.github.io/post/wei-shi-me-xuan-ze-ji-suan-ji-zhe-ge-zhuan-ye/">
+        </link>
+        <updated>2021-08-30T13:34:31.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="零-目前情况">零、目前情况</h1>
+<h2 id="01客观情况概述">01.客观情况概述</h2>
+<ol>
+<li>大三上学期开学第一天</li>
+<li>跟随学校的进度学习了：</li>
+</ol>
+<ul>
+<li>C</li>
+<li>C++</li>
+<li>python</li>
+<li>Java</li>
+<li>数据库</li>
+<li>数据结构</li>
+<li>数字逻辑</li>
+<li>计算机组成原理</li>
+<li>汇编语言</li>
+<li>离散数学</li>
+<li>算法设计与分析</li>
+</ul>
+<ol start="3">
+<li>参加过上学期的“蓝桥杯”程序竞赛，获得省二等奖（花了300块报名费，亏死）</li>
+<li>再过一周将参加数学建模竞赛，队内担任编程手，准备不充分</li>
+</ol>
+<h2 id="02主观情况概述">02.主观情况概述</h2>
+<ol>
+<li>常常放纵自己刷短视频</li>
+<li>总是漫无目地在电脑面前寻找刺激</li>
+<li>总是习惯性地对周围事物不求甚解</li>
+</ol>
+<h2 id="03为什么选择计算机这个专业">03.为什么选择计算机这个专业？</h2>
+<ol>
+<li>讨厌原来的专业，觉得学不到什么有用的东西，将来也不想从事相关的行业</li>
+<li>从小就对电脑感兴趣，算得上家里的电脑小能手</li>
+<li>学好本专业的先决条件很容易满足，只需要一个笔记本电脑</li>
+<li>只需要在电脑上敲几行代码便能实现各种各样的功能，不需要其他金钱的投入，我觉得很神奇</li>
+<li>看到自己敲好的代码成功运行后，非常有成就感</li>
+</ol>
+<h2 id="04为什么讨厌这个专业">04.为什么讨厌这个专业？</h2>
+<ol>
+<li>计算机行业加班严重</li>
+<li>掉头发</li>
+<li>需要不断学习</li>
+<li>老员工没有新员工有竞争力</li>
+<li>感觉自己像刚成熟的柠檬一样，被榨干后，便被丢弃</li>
+<li>一点也不觉得我在为社会创造价值，只是在为少数人赚钱服务</li>
+<li>这个行业体系很成熟，从零基础到入职，好像在打别人为你设置的游戏关卡一般，我讨厌这种感觉</li>
+<li>根本的一点还是觉得我没有创造任何社会价值，没有给国家和人民作出贡献</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Matlab入门]]></title>
+        <id>https://suenchi.github.io/post/matlab-ru-men/</id>
+        <link href="https://suenchi.github.io/post/matlab-ru-men/">
+        </link>
+        <updated>2021-08-26T00:18:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-随机数矩阵">一、随机数矩阵</h1>
+<ol>
+<li>标准正态分布<br>
+<code>randn(m,n)</code></li>
+<li>均值为μ，标准差为σ的正态分布<br>
+<code>normrnd(μ,σ,m,n)</code></li>
+<li>均值为μ的指数分布<br>
+<code>exprnd(u,m,n)</code></li>
+<li>参数为λ的泊松分布<br>
+<code>poissrnd(λ,m,n)</code></li>
+<li>在区间[a,b]之间均匀分布<br>
+<code>unifrnd(a,b,m,n)</code></li>
+<li>在区间[a,b]之间均匀分布的整数<br>
+<code>randi([a,b],[m,n])</code></li>
+</ol>
+<h1 id="二-全排列">二、全排列</h1>
+<ol>
+<li>随机产生1到8的一个全排列<br>
+<code>randperm(8)</code></li>
+<li>产生3到5的所有全排列<br>
+<code>perms([3,5])</code></li>
+</ol>
+<h1 id="三-求极限">三、求极限</h1>
+<figure data-type="image" tabindex="1"><img src="https://suenchi.github.io//post-images/1629941996551.jpg" alt="" loading="lazy"></figure>
+<pre><code>syms x a
+eqn=(1+a/x)^x;
+l=limit(eqn,x,inf)
+</code></pre>
+<h1 id="四-求导数">四、求导数</h1>
+<figure data-type="image" tabindex="2"><img src="https://suenchi.github.io//post-images/1629942098487.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+eqn=log((x+2)/(1-x));
+d3y=diff(eqn,x,3)
+</code></pre>
+<h1 id="五-求极值">五、求极值</h1>
+<figure data-type="image" tabindex="3"><img src="https://suenchi.github.io//post-images/1629942103995.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+y=x^3+6*x^2+8*x-1;
+dy=diff(y);
+xx=solve(dy)    % 解导数方程得到原函数极值点
+fplot(y);
+</code></pre>
+<h1 id="六-求积分">六、求积分</h1>
+<h2 id="1不定积分">1.不定积分</h2>
+<figure data-type="image" tabindex="4"><img src="https://suenchi.github.io//post-images/1629942121969.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+eqn=1/(1+sqrt(1-x^2));
+I=int(eqn);
+</code></pre>
+<h2 id="2定积分">2.定积分</h2>
+<ol>
+<li>一重定积分<br>
+<img src="https://suenchi.github.io//post-images/1629942138581.png" alt="" loading="lazy"></li>
+</ol>
+<pre><code>y=@(x)1/(x*(x^2‐3*x+2)^(1/3));
+I=integral(y,2,inf)
+</code></pre>
+<ol>
+<li>二重定积分<br>
+<img src="https://suenchi.github.io//post-images/1629942144223.png" alt="" loading="lazy"></li>
+</ol>
+<p><strong><center>先将二重定积分化为累次积分</center></strong></p>
+<figure data-type="image" tabindex="5"><img src="https://suenchi.github.io//post-images/1629942153496.png" alt="" loading="lazy"></figure>
+<pre><code>f=@(x,y)sqrt(1-x.^2-y.^2);
+ymax=@(x)sqrt(x-x.^2);  ymin=@(x)-sqrt(x-x.^2);
+I=integral2(f,0,1,ymin,ymax)
+</code></pre>
+<h1 id="七-级数求和">七、级数求和</h1>
+<figure data-type="image" tabindex="6"><img src="https://suenchi.github.io//post-images/1629942158291.png" alt="" loading="lazy"></figure>
+<pre><code>syms n
+f=(2*n-1)/2^n;
+s=symsum(f,n,1,inf)
+</code></pre>
+<h1 id="八-mat文件的存储和加载">八、mat文件的存储和加载</h1>
+<pre><code>a=rand(3,4);
+b=poissrnd(1,2,3);  % 均值为1的泊松分布
+% 1.存储
+save data_test.mat a b;     % 将数据a、b存入文件data_test.mat中
+% 2.加载
+load('data_test.mat');
+</code></pre>
+<h1 id="九-txt文件的读写">九、txt文件的读写</h1>
+<pre><code>% 1.写文件
+b=randi([0,10],3); %生成3阶随机整数矩阵
+writematrix(b,'data_test.txt');
+% 2.读文件
+b=readmatrix('data_test.txt');
+</code></pre>
+<h1 id="十-excel文件的读写">十、Excel文件的读写</h1>
+<pre><code>% 1.写文件
+%{
+    把一个5×10矩阵写到文件data_test.xlsx，Sheet2，B2开始的域中
+%}
+a=rand(5,10); 
+writematrix(a, 'data_test.xlsx', 'Sheet', 2, 'Range', 'B2');
+% 2.读文件
+%{
+    将data_test.xlsx，Sheet2 “C3：F6”中的数据赋给b
+%}
+b=readmatrix('data_test.xlsx','Sheet',2,'Range','C3:F6')
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[MarkDown语法]]></title>
+        <id>https://suenchi.github.io/post/markdown-yu-fa/</id>
+        <link href="https://suenchi.github.io/post/markdown-yu-fa/">
+        </link>
+        <updated>2021-08-23T15:06:25.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-列表">一、列表</h1>
+<ol>
+<li>无序列表</li>
+</ol>
+<pre><code>* 文字内容
+</code></pre>
+<ol start="2">
+<li>有序列表(注意空格)</li>
+</ol>
+<pre><code>1. 文字内容
+</code></pre>
+<ol start="3">
+<li>列表嵌套</li>
+</ol>
+<pre><code>1. 文字内容
+    * 文字内容
+    * 文字内容
+</code></pre>
+<h1 id="二-分割线">二、分割线</h1>
+<ol>
+<li>效果一</li>
+</ol>
+<pre><code>分割线上一部分
+***
+分割线下一部分
+</code></pre>
+<ol start="2">
+<li>效果二</li>
+</ol>
+<pre><code>分割线上一部分
+---
+分割线下一部分
+</code></pre>
+<h1 id="三-字体">三、字体</h1>
+<ol>
+<li>加粗</li>
+</ol>
+<pre><code>**文字内容**
+</code></pre>
+<ol start="2">
+<li>斜体</li>
+</ol>
+<pre><code>*文字内容*
+</code></pre>
+<ol start="3">
+<li>斜体且加粗</li>
+</ol>
+<pre><code>***文字内容***
+</code></pre>
+<ol start="4">
+<li>删除线</li>
+</ol>
+<pre><code>~~文字内容~~
+</code></pre>
+<h1 id="四-引用">四、引用</h1>
+<pre><code>&gt;文字内容1
+&gt;文字内容2
+</code></pre>
+<h1 id="五-超链接">五、超链接</h1>
+<pre><code>[超链接名](超链接网址)
+</code></pre>
+<h1 id="六-代码">六、代码</h1>
+<ol>
+<li>单行</li>
+</ol>
+<pre><code>'代码'
+</code></pre>
+<ol start="2">
+<li>多行</li>
+</ol>
+<pre><code>(```)
+代码1
+代码2
+(```)
+</code></pre>
+<h1 id="七-表格">七、表格</h1>
+<pre><code>表头1|表头2|表头3
+---|:---:|---:
+内容1|内容2|内容3
+内容4|内容5|内容6
+
+# 说明：内容1和内容4默认左对齐，内容2和内容5居中对齐，内容3和内容6右对齐
+</code></pre>
+<h1 id="八-脚注">八、脚注</h1>
+<pre><code>文字内容[^脚注内容]
+[^脚注内容]:脚注什么
+
+# 说明：“脚注什么”会自动放置于文章最后
+</code></pre>
+<h1 id="九-图片">九、图片</h1>
+<pre><code>![图片标识](图片地址 &quot;图片标题&quot;)
+
+# 示例：![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)
+</code></pre>
+<h1 id="参考来源">参考来源</h1>
+<p>[1]<a href="https://www.jianshu.com/p/191d1e21f7ed">高鸿祥-简书</a><br>
+[2]<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://suenchi.github.io/post/hello-gridea/</id>
+        <link href="https://suenchi.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

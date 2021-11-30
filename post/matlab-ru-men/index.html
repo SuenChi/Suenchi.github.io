@@ -1,0 +1,320 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Matlab入门 | SuenChi</title>
+<link rel="shortcut icon" href="https://suenchi.github.io//favicon.ico?v=1638258968350">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://suenchi.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Matlab入门 | SuenChi - Atom Feed" href="https://suenchi.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一、随机数矩阵
+
+标准正态分布
+randn(m,n)
+均值为μ，标准差为σ的正态分布
+normrnd(μ,σ,m,n)
+均值为μ的指数分布
+exprnd(u,m,n)
+参数为λ的泊松分布
+poissrnd(λ,m,n)
+在区间[a,b]之间..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://suenchi.github.io/">
+  <img class="avatar" src="https://suenchi.github.io//images/avatar.png?v=1638258968350" alt="">
+  </a>
+  <h1 class="site-title">
+    SuenChi
+  </h1>
+  <p class="site-description">
+    冰冻三尺非一日之寒，积土成山非须斯之作
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Matlab入门
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-26
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://suenchi.github.io//post-images/matlab-ru-men.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="一-随机数矩阵">一、随机数矩阵</h1>
+<ol>
+<li>标准正态分布<br>
+<code>randn(m,n)</code></li>
+<li>均值为μ，标准差为σ的正态分布<br>
+<code>normrnd(μ,σ,m,n)</code></li>
+<li>均值为μ的指数分布<br>
+<code>exprnd(u,m,n)</code></li>
+<li>参数为λ的泊松分布<br>
+<code>poissrnd(λ,m,n)</code></li>
+<li>在区间[a,b]之间均匀分布<br>
+<code>unifrnd(a,b,m,n)</code></li>
+<li>在区间[a,b]之间均匀分布的整数<br>
+<code>randi([a,b],[m,n])</code></li>
+</ol>
+<h1 id="二-全排列">二、全排列</h1>
+<ol>
+<li>随机产生1到8的一个全排列<br>
+<code>randperm(8)</code></li>
+<li>产生3到5的所有全排列<br>
+<code>perms([3,5])</code></li>
+</ol>
+<h1 id="三-求极限">三、求极限</h1>
+<figure data-type="image" tabindex="1"><img src="https://suenchi.github.io//post-images/1629941996551.jpg" alt="" loading="lazy"></figure>
+<pre><code>syms x a
+eqn=(1+a/x)^x;
+l=limit(eqn,x,inf)
+</code></pre>
+<h1 id="四-求导数">四、求导数</h1>
+<figure data-type="image" tabindex="2"><img src="https://suenchi.github.io//post-images/1629942098487.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+eqn=log((x+2)/(1-x));
+d3y=diff(eqn,x,3)
+</code></pre>
+<h1 id="五-求极值">五、求极值</h1>
+<figure data-type="image" tabindex="3"><img src="https://suenchi.github.io//post-images/1629942103995.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+y=x^3+6*x^2+8*x-1;
+dy=diff(y);
+xx=solve(dy)    % 解导数方程得到原函数极值点
+fplot(y);
+</code></pre>
+<h1 id="六-求积分">六、求积分</h1>
+<h2 id="1不定积分">1.不定积分</h2>
+<figure data-type="image" tabindex="4"><img src="https://suenchi.github.io//post-images/1629942121969.png" alt="" loading="lazy"></figure>
+<pre><code>syms x
+eqn=1/(1+sqrt(1-x^2));
+I=int(eqn);
+</code></pre>
+<h2 id="2定积分">2.定积分</h2>
+<ol>
+<li>一重定积分<br>
+<img src="https://suenchi.github.io//post-images/1629942138581.png" alt="" loading="lazy"></li>
+</ol>
+<pre><code>y=@(x)1/(x*(x^2‐3*x+2)^(1/3));
+I=integral(y,2,inf)
+</code></pre>
+<ol>
+<li>二重定积分<br>
+<img src="https://suenchi.github.io//post-images/1629942144223.png" alt="" loading="lazy"></li>
+</ol>
+<p><strong><center>先将二重定积分化为累次积分</center></strong></p>
+<figure data-type="image" tabindex="5"><img src="https://suenchi.github.io//post-images/1629942153496.png" alt="" loading="lazy"></figure>
+<pre><code>f=@(x,y)sqrt(1-x.^2-y.^2);
+ymax=@(x)sqrt(x-x.^2);  ymin=@(x)-sqrt(x-x.^2);
+I=integral2(f,0,1,ymin,ymax)
+</code></pre>
+<h1 id="七-级数求和">七、级数求和</h1>
+<figure data-type="image" tabindex="6"><img src="https://suenchi.github.io//post-images/1629942158291.png" alt="" loading="lazy"></figure>
+<pre><code>syms n
+f=(2*n-1)/2^n;
+s=symsum(f,n,1,inf)
+</code></pre>
+<h1 id="八-mat文件的存储和加载">八、mat文件的存储和加载</h1>
+<pre><code>a=rand(3,4);
+b=poissrnd(1,2,3);  % 均值为1的泊松分布
+% 1.存储
+save data_test.mat a b;     % 将数据a、b存入文件data_test.mat中
+% 2.加载
+load('data_test.mat');
+</code></pre>
+<h1 id="九-txt文件的读写">九、txt文件的读写</h1>
+<pre><code>% 1.写文件
+b=randi([0,10],3); %生成3阶随机整数矩阵
+writematrix(b,'data_test.txt');
+% 2.读文件
+b=readmatrix('data_test.txt');
+</code></pre>
+<h1 id="十-excel文件的读写">十、Excel文件的读写</h1>
+<pre><code>% 1.写文件
+%{
+    把一个5×10矩阵写到文件data_test.xlsx，Sheet2，B2开始的域中
+%}
+a=rand(5,10); 
+writematrix(a, 'data_test.xlsx', 'Sheet', 2, 'Range', 'B2');
+% 2.读文件
+%{
+    将data_test.xlsx，Sheet2 “C3：F6”中的数据赋给b
+%}
+b=readmatrix('data_test.xlsx','Sheet',2,'Range','C3:F6')
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80-%E9%9A%8F%E6%9C%BA%E6%95%B0%E7%9F%A9%E9%98%B5">一、随机数矩阵</a></li>
+<li><a href="#%E4%BA%8C-%E5%85%A8%E6%8E%92%E5%88%97">二、全排列</a></li>
+<li><a href="#%E4%B8%89-%E6%B1%82%E6%9E%81%E9%99%90">三、求极限</a></li>
+<li><a href="#%E5%9B%9B-%E6%B1%82%E5%AF%BC%E6%95%B0">四、求导数</a></li>
+<li><a href="#%E4%BA%94-%E6%B1%82%E6%9E%81%E5%80%BC">五、求极值</a></li>
+<li><a href="#%E5%85%AD-%E6%B1%82%E7%A7%AF%E5%88%86">六、求积分</a>
+<ul>
+<li><a href="#1%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86">1.不定积分</a></li>
+<li><a href="#2%E5%AE%9A%E7%A7%AF%E5%88%86">2.定积分</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83-%E7%BA%A7%E6%95%B0%E6%B1%82%E5%92%8C">七、级数求和</a></li>
+<li><a href="#%E5%85%AB-mat%E6%96%87%E4%BB%B6%E7%9A%84%E5%AD%98%E5%82%A8%E5%92%8C%E5%8A%A0%E8%BD%BD">八、mat文件的存储和加载</a></li>
+<li><a href="#%E4%B9%9D-txt%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99">九、txt文件的读写</a></li>
+<li><a href="#%E5%8D%81-excel%E6%96%87%E4%BB%B6%E7%9A%84%E8%AF%BB%E5%86%99">十、Excel文件的读写</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://suenchi.github.io/post/markdown-yu-fa/">
+              <h3 class="post-title">
+                MarkDown语法
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'ce66a835b3ecb38a040',
+    clientSecret: 'b12f627b86f0986ebd72ccf810dce0a24d4517bb',
+    repo: 'suenchi.github.io',
+    owner: 'suenchi',
+    admin: ['suenchi'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://suenchi.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
