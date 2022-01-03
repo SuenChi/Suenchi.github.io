@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://suenchi.github.io/</id>
     <title>SuenChi</title>
-    <updated>2022-01-03T07:29:11.223Z</updated>
+    <updated>2022-01-03T09:32:28.035Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://suenchi.github.io/"/>
     <link rel="self" href="https://suenchi.github.io/atom.xml"/>
@@ -10,6 +10,248 @@
     <logo>https://suenchi.github.io/images/avatar.png</logo>
     <icon>https://suenchi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, SuenChi</rights>
+    <entry>
+        <title type="html"><![CDATA[JavaScript入门]]></title>
+        <id>https://suenchi.github.io/post/javascript-ru-men/</id>
+        <link href="https://suenchi.github.io/post/javascript-ru-men/">
+        </link>
+        <updated>2022-01-03T08:18:53.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="一-什么是javascript">一、什么是JavaScript</h2>
+<p>简称js，是一种常用于开发Web页面的脚本语言，which具有函数优先的轻量级，解释型或即时编译型。</p>
+<blockquote>
+<p>特点</p>
+</blockquote>
+<ul>
+<li>脚本语言：是一种解释型的脚本语言，在程序运行过程中逐行进行解释</li>
+<li>基于对象：创建对象和使用对象</li>
+<li>弱类型：变量的数据类型未做出严格要求</li>
+<li>动态性：不需要经过Web服务器便可对用户输入做出响应，如对鼠标的点击、移动等用户操作做出响应</li>
+<li>跨平台性：不依赖于操作系统，仅需要浏览器的支持</li>
+</ul>
+<h2 id="二-与html的结合方式">二、与HTML的结合方式</h2>
+<ol>
+<li><code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>标签内</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    alert(&quot;hello javaScript!&quot;);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><code>&lt;script&gt;</code>标签引入</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;xxx.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="三-变量">三、变量</h2>
+<blockquote>
+<p>变量类型</p>
+</blockquote>
+<ul>
+<li>number：数值</li>
+<li>string：字符串</li>
+<li>object：对象</li>
+<li>boolean：布尔</li>
+<li>function：函数</li>
+</ul>
+<blockquote>
+<p>特殊的值</p>
+</blockquote>
+<ul>
+<li><code>undefined</code>：未定义，所有js 变量未赋于初始值的时候，默认值都是undefined</li>
+<li><code>null</code>：空值</li>
+<li><code>NaN</code>：非数字</li>
+</ul>
+<blockquote>
+<p>定义变量</p>
+</blockquote>
+<ul>
+<li><code>var x;</code></li>
+<li><code>var x='hello';</code></li>
+</ul>
+<h2 id="四-运算符">四、运算符</h2>
+<h3 id="1关系运算符">1.关系运算符</h3>
+<ul>
+<li><code>==</code>：等于，做简单字面值的比较</li>
+<li><code>===</code>：全等于，做简单字面值的比较，且做数据类型的比较</li>
+</ul>
+<pre><code>var a=10;
+var b='10';
+alert(a==b);   //true
+alert(a===b);   //false
+</code></pre>
+<h3 id="2逻辑运算符">2.逻辑运算符</h3>
+<ul>
+<li><code>&amp;&amp;</code>：表达式全为真时，返回最后一个表达式的值；表达式有一个为假时，返回第一个为假的表达式的值</li>
+<li><code>||</code>：表达式全为假时，返回最后一个表达式的值；表达式有一个为真时，返回第一个为真的表达式的值</li>
+</ul>
+<h2 id="五-数组的定义">五、数组的定义</h2>
+<ul>
+<li><code>var arr=[];</code></li>
+<li><code>var arr=[1,'abc',true];</code></li>
+</ul>
+<h2 id="六-函数">六、函数</h2>
+<h3 id="1定义">1.定义</h3>
+<ol>
+<li><code>function</code>关键字定义</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function sum(num1,num2) {
+            var result = num1 + num2;
+            return result;
+        }
+        alert( sum(100,50) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><code>var</code>定义</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var fun = function (num1,num2) {
+            return num1 + num2;
+        }
+        alert( fun(100,200) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2函数的argument隐形参数">2.函数的argument隐形参数</h3>
+<blockquote>
+<p>不需要定义函数形参，利用argument便可获取所有参数</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        // 编写一个函数,用于计算所有参数相加的和并返回
+        function sum(num1,num2) {
+            var result = 0;
+            for (var i = 0; i &lt; arguments.length; i++) {
+                    result += arguments[i];
+            }
+            return result;
+        }
+        alert( sum(1,2,3,4,5,6,7,8,9) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="七-自定义对象">七、自定义对象</h2>
+<h3 id="1对象的定义">1.对象的定义</h3>
+<ol>
+<li><code>var</code>定义</li>
+</ol>
+<pre><code class="language-javascript">var obj = new Object();
+obj.属性名 = 值;
+obj.函数名 = function(){};
+</code></pre>
+<ol start="2">
+<li><code>{}</code>定义</li>
+</ol>
+<pre><code class="language-javascript">var 变量名= { // 空对象
+    属性名：值,
+    函数名：function(){}
+};
+</code></pre>
+<h3 id="2对象的访问">2.对象的访问</h3>
+<pre><code class="language-javascript">obj.属性名;
+obj.函数名();
+</code></pre>
+<h2 id="八-事件">八、事件</h2>
+<blockquote>
+<p>事件指用户输入与页面交互的响应，常见的事件如下：</p>
+</blockquote>
+<ul>
+<li>onload 加载完成事件：页面加载完成之后，常用于做页面js 代码初始化操作</li>
+<li>onclick 单击事件：常用于按钮的点击响应操作</li>
+<li>onblur 失去焦点事件：常用用于输入框失去焦点后验证其输入内容是否合法</li>
+<li>onchange 内容发生改变事件：常用于下拉列表和输入框内容发生改变后操作</li>
+<li>onsubmit 表单提交事件：常用于表单提交前，验证所有表单项是否合法</li>
+</ul>
+<h3 id="1静态注册">1.静态注册</h3>
+<blockquote>
+<p>通过html标签的事件属性直接赋于事件响应后的代码</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function onloadFun() {
+            alert('静态注册onload 事件，所有代码');
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;onloadFun();&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2动态注册">2.动态注册</h3>
+<blockquote>
+<p>先通过获取标对象，然后再通过标签对象.事件名= function(){} 这种形式赋于事件响应后的代码</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        window.onload = function () {
+            // 1.获取标签对象
+            var btnObj = document.getElementById(&quot;btn01&quot;);
+            // 2.标签对象.事件名= function(){}
+            btnObj.onclick = function () {
+                alert(&quot;动态注册的onclick 事件&quot;);
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;btn01&quot;&gt;按钮&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Matlab入门]]></title>
         <id>https://suenchi.github.io/post/matlab-ru-men/</id>

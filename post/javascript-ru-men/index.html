@@ -1,0 +1,446 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JavaScript入门 | SuenChi</title>
+<link rel="shortcut icon" href="https://suenchi.github.io//favicon.ico?v=1641202342959">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://suenchi.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="JavaScript入门 | SuenChi - Atom Feed" href="https://suenchi.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一、什么是JavaScript
+简称js，是一种常用于开发Web页面的脚本语言，which具有函数优先的轻量级，解释型或即时编译型。
+
+特点
+
+
+脚本语言：是一种解释型的脚本语言，在程序运行过程中逐行进行解释
+基于对象：创建对象和使用对象
+..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://suenchi.github.io/">
+  <img class="avatar" src="https://suenchi.github.io//images/avatar.png?v=1641202342959" alt="">
+  </a>
+  <h1 class="site-title">
+    SuenChi
+  </h1>
+  <p class="site-description">
+    冰冻三尺非一日之寒，积土成山非须斯之作
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/SuenChi" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              JavaScript入门
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-01-03
+              </span>
+              <span>
+                6 min read
+              </span>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://suenchi.github.io//post-images/javascript-ru-men.gif" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h2 id="一-什么是javascript">一、什么是JavaScript</h2>
+<p>简称js，是一种常用于开发Web页面的脚本语言，which具有函数优先的轻量级，解释型或即时编译型。</p>
+<blockquote>
+<p>特点</p>
+</blockquote>
+<ul>
+<li>脚本语言：是一种解释型的脚本语言，在程序运行过程中逐行进行解释</li>
+<li>基于对象：创建对象和使用对象</li>
+<li>弱类型：变量的数据类型未做出严格要求</li>
+<li>动态性：不需要经过Web服务器便可对用户输入做出响应，如对鼠标的点击、移动等用户操作做出响应</li>
+<li>跨平台性：不依赖于操作系统，仅需要浏览器的支持</li>
+</ul>
+<h2 id="二-与html的结合方式">二、与HTML的结合方式</h2>
+<ol>
+<li><code>&lt;head&gt;</code>或<code>&lt;body&gt;</code>标签内</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    alert(&quot;hello javaScript!&quot;);
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><code>&lt;script&gt;</code>标签引入</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;xxx.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="三-变量">三、变量</h2>
+<blockquote>
+<p>变量类型</p>
+</blockquote>
+<ul>
+<li>number：数值</li>
+<li>string：字符串</li>
+<li>object：对象</li>
+<li>boolean：布尔</li>
+<li>function：函数</li>
+</ul>
+<blockquote>
+<p>特殊的值</p>
+</blockquote>
+<ul>
+<li><code>undefined</code>：未定义，所有js 变量未赋于初始值的时候，默认值都是undefined</li>
+<li><code>null</code>：空值</li>
+<li><code>NaN</code>：非数字</li>
+</ul>
+<blockquote>
+<p>定义变量</p>
+</blockquote>
+<ul>
+<li><code>var x;</code></li>
+<li><code>var x='hello';</code></li>
+</ul>
+<h2 id="四-运算符">四、运算符</h2>
+<h3 id="1关系运算符">1.关系运算符</h3>
+<ul>
+<li><code>==</code>：等于，做简单字面值的比较</li>
+<li><code>===</code>：全等于，做简单字面值的比较，且做数据类型的比较</li>
+</ul>
+<pre><code>var a=10;
+var b='10';
+alert(a==b);   //true
+alert(a===b);   //false
+</code></pre>
+<h3 id="2逻辑运算符">2.逻辑运算符</h3>
+<ul>
+<li><code>&amp;&amp;</code>：表达式全为真时，返回最后一个表达式的值；表达式有一个为假时，返回第一个为假的表达式的值</li>
+<li><code>||</code>：表达式全为假时，返回最后一个表达式的值；表达式有一个为真时，返回第一个为真的表达式的值</li>
+</ul>
+<h2 id="五-数组的定义">五、数组的定义</h2>
+<ul>
+<li><code>var arr=[];</code></li>
+<li><code>var arr=[1,'abc',true];</code></li>
+</ul>
+<h2 id="六-函数">六、函数</h2>
+<h3 id="1定义">1.定义</h3>
+<ol>
+<li><code>function</code>关键字定义</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function sum(num1,num2) {
+            var result = num1 + num2;
+            return result;
+        }
+        alert( sum(100,50) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ol start="2">
+<li><code>var</code>定义</li>
+</ol>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        var fun = function (num1,num2) {
+            return num1 + num2;
+        }
+        alert( fun(100,200) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2函数的argument隐形参数">2.函数的argument隐形参数</h3>
+<blockquote>
+<p>不需要定义函数形参，利用argument便可获取所有参数</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        // 编写一个函数,用于计算所有参数相加的和并返回
+        function sum(num1,num2) {
+            var result = 0;
+            for (var i = 0; i &lt; arguments.length; i++) {
+                    result += arguments[i];
+            }
+            return result;
+        }
+        alert( sum(1,2,3,4,5,6,7,8,9) );
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="七-自定义对象">七、自定义对象</h2>
+<h3 id="1对象的定义">1.对象的定义</h3>
+<ol>
+<li><code>var</code>定义</li>
+</ol>
+<pre><code class="language-javascript">var obj = new Object();
+obj.属性名 = 值;
+obj.函数名 = function(){};
+</code></pre>
+<ol start="2">
+<li><code>{}</code>定义</li>
+</ol>
+<pre><code class="language-javascript">var 变量名= { // 空对象
+    属性名：值,
+    函数名：function(){}
+};
+</code></pre>
+<h3 id="2对象的访问">2.对象的访问</h3>
+<pre><code class="language-javascript">obj.属性名;
+obj.函数名();
+</code></pre>
+<h2 id="八-事件">八、事件</h2>
+<blockquote>
+<p>事件指用户输入与页面交互的响应，常见的事件如下：</p>
+</blockquote>
+<ul>
+<li>onload 加载完成事件：页面加载完成之后，常用于做页面js 代码初始化操作</li>
+<li>onclick 单击事件：常用于按钮的点击响应操作</li>
+<li>onblur 失去焦点事件：常用用于输入框失去焦点后验证其输入内容是否合法</li>
+<li>onchange 内容发生改变事件：常用于下拉列表和输入框内容发生改变后操作</li>
+<li>onsubmit 表单提交事件：常用于表单提交前，验证所有表单项是否合法</li>
+</ul>
+<h3 id="1静态注册">1.静态注册</h3>
+<blockquote>
+<p>通过html标签的事件属性直接赋于事件响应后的代码</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        function onloadFun() {
+            alert('静态注册onload 事件，所有代码');
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;onloadFun();&quot;&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2动态注册">2.动态注册</h3>
+<blockquote>
+<p>先通过获取标对象，然后再通过标签对象.事件名= function(){} 这种形式赋于事件响应后的代码</p>
+</blockquote>
+<pre><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        window.onload = function () {
+            // 1.获取标签对象
+            var btnObj = document.getElementById(&quot;btn01&quot;);
+            // 2.标签对象.事件名= function(){}
+            btnObj.onclick = function () {
+                alert(&quot;动态注册的onclick 事件&quot;);
+            }
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;button id=&quot;btn01&quot;&gt;按钮&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E4%BB%80%E4%B9%88%E6%98%AFjavascript">一、什么是JavaScript</a></li>
+<li><a href="#%E4%BA%8C-%E4%B8%8Ehtml%E7%9A%84%E7%BB%93%E5%90%88%E6%96%B9%E5%BC%8F">二、与HTML的结合方式</a></li>
+<li><a href="#%E4%B8%89-%E5%8F%98%E9%87%8F">三、变量</a></li>
+<li><a href="#%E5%9B%9B-%E8%BF%90%E7%AE%97%E7%AC%A6">四、运算符</a>
+<ul>
+<li><a href="#1%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6">1.关系运算符</a></li>
+<li><a href="#2%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6">2.逻辑运算符</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94-%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89">五、数组的定义</a></li>
+<li><a href="#%E5%85%AD-%E5%87%BD%E6%95%B0">六、函数</a>
+<ul>
+<li><a href="#1%E5%AE%9A%E4%B9%89">1.定义</a></li>
+<li><a href="#2%E5%87%BD%E6%95%B0%E7%9A%84argument%E9%9A%90%E5%BD%A2%E5%8F%82%E6%95%B0">2.函数的argument隐形参数</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1">七、自定义对象</a>
+<ul>
+<li><a href="#1%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AE%9A%E4%B9%89">1.对象的定义</a></li>
+<li><a href="#2%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%AE%BF%E9%97%AE">2.对象的访问</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AB-%E4%BA%8B%E4%BB%B6">八、事件</a>
+<ul>
+<li><a href="#1%E9%9D%99%E6%80%81%E6%B3%A8%E5%86%8C">1.静态注册</a></li>
+<li><a href="#2%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C">2.动态注册</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://suenchi.github.io/post/matlab-ru-men/">
+              <h3 class="post-title">
+                Matlab入门
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://suenchi.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
