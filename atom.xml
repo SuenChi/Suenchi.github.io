@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://suenchi.github.io/</id>
     <title>SuenChi</title>
-    <updated>2022-01-03T07:26:49.985Z</updated>
+    <updated>2022-01-03T07:29:11.223Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://suenchi.github.io/"/>
     <link rel="self" href="https://suenchi.github.io/atom.xml"/>
@@ -10,62 +10,6 @@
     <logo>https://suenchi.github.io/images/avatar.png</logo>
     <icon>https://suenchi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, SuenChi</rights>
-    <entry>
-        <title type="html"><![CDATA[为什么选择计算机这个专业]]></title>
-        <id>https://suenchi.github.io/post/wei-shi-me-xuan-ze-ji-suan-ji-zhe-ge-zhuan-ye/</id>
-        <link href="https://suenchi.github.io/post/wei-shi-me-xuan-ze-ji-suan-ji-zhe-ge-zhuan-ye/">
-        </link>
-        <updated>2021-08-30T13:34:31.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="零-目前情况">零、目前情况</h1>
-<h2 id="01客观情况概述">01.客观情况概述</h2>
-<ol>
-<li>大三上学期开学第一天</li>
-<li>跟随学校的进度学习了：</li>
-</ol>
-<ul>
-<li>C</li>
-<li>C++</li>
-<li>python</li>
-<li>Java</li>
-<li>数据库</li>
-<li>数据结构</li>
-<li>数字逻辑</li>
-<li>计算机组成原理</li>
-<li>汇编语言</li>
-<li>离散数学</li>
-<li>算法设计与分析</li>
-</ul>
-<ol start="3">
-<li>参加过上学期的“蓝桥杯”程序竞赛，获得省二等奖（花了300块报名费，亏死）</li>
-<li>再过一周将参加数学建模竞赛，队内担任编程手，准备不充分</li>
-</ol>
-<h2 id="02主观情况概述">02.主观情况概述</h2>
-<ol>
-<li>常常放纵自己刷短视频</li>
-<li>总是漫无目地在电脑面前寻找刺激</li>
-<li>总是习惯性地对周围事物不求甚解</li>
-</ol>
-<h2 id="03为什么选择计算机这个专业">03.为什么选择计算机这个专业？</h2>
-<ol>
-<li>讨厌原来的专业，觉得学不到什么有用的东西，将来也不想从事相关的行业</li>
-<li>从小就对电脑感兴趣，算得上家里的电脑小能手</li>
-<li>学好本专业的先决条件很容易满足，只需要一个笔记本电脑</li>
-<li>只需要在电脑上敲几行代码便能实现各种各样的功能，不需要其他金钱的投入，我觉得很神奇</li>
-<li>看到自己敲好的代码成功运行后，非常有成就感</li>
-</ol>
-<h2 id="04为什么讨厌这个专业">04.为什么讨厌这个专业？</h2>
-<ol>
-<li>计算机行业加班严重</li>
-<li>掉头发</li>
-<li>需要不断学习</li>
-<li>老员工没有新员工有竞争力</li>
-<li>感觉自己像刚成熟的柠檬一样，被榨干后，便被丢弃</li>
-<li>一点也不觉得我在为社会创造价值，只是在为少数人赚钱服务</li>
-<li>这个行业体系很成熟，从零基础到入职，好像在打别人为你设置的游戏关卡一般，我讨厌这种感觉</li>
-<li>根本的一点还是觉得我没有创造任何社会价值，没有给国家和人民作出贡献</li>
-</ol>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Matlab入门]]></title>
         <id>https://suenchi.github.io/post/matlab-ru-men/</id>
